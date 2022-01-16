@@ -41,3 +41,8 @@ apt-get install -y php8.1 php8.1-fpm php-pear php8.1-mysql
 # Install Caddy
 # -
 apt-get install -y caddy
+
+# -
+# Enable and start php8.1-fpm systemd daemon
+# -
+systemctl enable --now php8.1-fpm
