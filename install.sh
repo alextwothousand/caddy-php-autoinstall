@@ -10,6 +10,11 @@ apt-get update -y
 apt-get upgrade -y
 
 # -
+# Install basic packages
+# -
+apt-get install -y curl wget
+
+# -
 # Add Caddy repositories
 # -
 apt-get install -y debian-keyring debian-archive-keyring apt-transport-https
