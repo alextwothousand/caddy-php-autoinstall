@@ -33,16 +33,21 @@ wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add -
 apt-get update -y
 
 # -
-# Install PHP
+# Install PHP 8.1
 # -
-apt-get install -y php8.1 php8.1-fpm php-pear php8.1-mysql
+apt-get install -y php8.1 php8.1-fpm php-pear php8.1-mysql php8.1-mbstring php8.1-gd php8.1-zip php8.1-curl
 
 # -
-# Install Caddy
+# Install Caddy and mariadb
 # -
-apt-get install -y caddy
+apt-get install -y caddy mariadb-server
 
 # -
 # Enable and start php8.1-fpm systemd daemon
 # -
 systemctl enable --now php8.1-fpm
+
+# -
+# Enable and start mariadb systemd daemon
+# -
+systemctl enable --now mariadb
